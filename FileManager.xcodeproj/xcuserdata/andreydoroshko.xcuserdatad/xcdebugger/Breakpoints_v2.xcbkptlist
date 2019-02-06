@@ -6,15 +6,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FileManager/ImagesViewController.swift"
-            timestampString = "571174448.2939661"
+            timestampString = "571177744.8311501"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "tap(_:)"
             landmarkType = "7">
          </BreakpointContent>

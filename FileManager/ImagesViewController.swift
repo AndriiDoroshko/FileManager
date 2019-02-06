@@ -14,7 +14,6 @@ class ImagesViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     let bundleService = BundleDomainService()
-    let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ImagesViewController.tap(_:)))
     var images = [UIImage]() 
     
     override func viewDidLoad() {
@@ -26,7 +25,24 @@ class ImagesViewController: UIViewController {
     }
     
     @objc func tap(_ sender: AnyObject) {
-        print(sender.view.tag)
+        guard let imageView = sender.view! as? UIImageView else { return }
+        let newImageView = UIImageView(image: imageView.image)
+        newImageView.frame = UIScreen.main.bounds
+        newImageView.backgroundColor = .black
+        newImageView.contentMode = .scaleAspectFit
+        newImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+        newImageView.addGestureRecognizer(tap)
+        self.view.addSubview(newImageView)
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+        print("sender.view.tag")
+    }
+    
+    @objc func dismissFullscreenImage(_ sender: AnyObject) {
+        self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = false
+        sender.view?.removeFromSuperview()
     }
 }
 
@@ -44,9 +60,9 @@ extension ImagesViewController: UICollectionViewDelegate, UICollectionViewDataSo
         guard let collectionViewCell = cell as? CollectionViewCell else { return cell }
         collectionViewCell.displayImage(images[indexPath.item])
         
-        collectionViewCell.imageView.isUserInteractionEnabled = true
         collectionViewCell.imageView.tag = indexPath.row
-        collectionViewCell.imageView.addGestureRecognizer(tapGestureRecognizer)
+        collectionViewCell.imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap)))
+        collectionViewCell.imageView.isUserInteractionEnabled = true
         
         return collectionViewCell
     }
