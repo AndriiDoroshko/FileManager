@@ -20,6 +20,8 @@
 		428FF220220B49060006A9A7 /* IMG_0226.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 428FF21B220B49060006A9A7 /* IMG_0226.jpeg */; };
 		428FF221220B49060006A9A7 /* IMG_2750.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 428FF21C220B49060006A9A7 /* IMG_2750.jpeg */; };
 		428FF224220B4DE20006A9A7 /* MainScreenTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428FF223220B4DE20006A9A7 /* MainScreenTableViewModel.swift */; };
+		428FF227220B5C430006A9A7 /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428FF226220B5C430006A9A7 /* ImagesViewController.swift */; };
+		428FF22A220B60AE0006A9A7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428FF229220B60AE0006A9A7 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		428FF21B220B49060006A9A7 /* IMG_0226.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0226.jpeg; sourceTree = "<group>"; };
 		428FF21C220B49060006A9A7 /* IMG_2750.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2750.jpeg; sourceTree = "<group>"; };
 		428FF223220B4DE20006A9A7 /* MainScreenTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenTableViewModel.swift; sourceTree = "<group>"; };
+		428FF226220B5C430006A9A7 /* ImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
+		428FF229220B60AE0006A9A7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				420F8136220B3BDE00F54596 /* AppDelegate.swift */,
-				420F8138220B3BDE00F54596 /* ViewController.swift */,
+				428FF228220B5D940006A9A7 /* ViewControllers */,
 				428FF216220B462E0006A9A7 /* BundleDomainService.swift */,
 				420F813A220B3BDE00F54596 /* Main.storyboard */,
 				420F813D220B3BE000F54596 /* Assets.xcassets */,
@@ -101,6 +105,7 @@
 				428FF218220B49050006A9A7 /* IMG_0016.jpeg */,
 				428FF222220B493C0006A9A7 /* images */,
 				428FF225220B50A50006A9A7 /* TableViewModel */,
+				428FF229220B60AE0006A9A7 /* CollectionViewCell.swift */,
 			);
 			path = FileManager;
 			sourceTree = "<group>";
@@ -131,6 +136,15 @@
 				428FF223220B4DE20006A9A7 /* MainScreenTableViewModel.swift */,
 			);
 			name = TableViewModel;
+			sourceTree = "<group>";
+		};
+		428FF228220B5D940006A9A7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				420F8138220B3BDE00F54596 /* ViewController.swift */,
+				428FF226220B5C430006A9A7 /* ImagesViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,7 +253,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				428FF227220B5C430006A9A7 /* ImagesViewController.swift in Sources */,
 				428FF217220B462E0006A9A7 /* BundleDomainService.swift in Sources */,
+				428FF22A220B60AE0006A9A7 /* CollectionViewCell.swift in Sources */,
 				420F8139220B3BDE00F54596 /* ViewController.swift in Sources */,
 				428FF224220B4DE20006A9A7 /* MainScreenTableViewModel.swift in Sources */,
 				420F8137220B3BDE00F54596 /* AppDelegate.swift in Sources */,

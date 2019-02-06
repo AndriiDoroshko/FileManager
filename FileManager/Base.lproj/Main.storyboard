@@ -57,5 +57,65 @@
             </objects>
             <point key="canvasLocation" x="386" y="37"/>
         </scene>
+        <!--Images View Controller-->
+        <scene sceneID="vPj-Uz-EEl">
+            <objects>
+                <viewController storyboardIdentifier="imagesViewController" id="fAS-tl-5i7" customClass="ImagesViewController" customModule="FileManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7s6-rG-CTL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ghi-nv-R7E">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M9O-cH-xo6">
+                                    <size key="itemSize" width="381" height="197"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="collectionViewCell" id="XXh-Yo-l28" customClass="CollectionViewCell" customModule="FileManager" customModuleProvider="target">
+                                        <rect key="frame" x="-3" y="0.0" width="381" height="197"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="197"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E5O-Pn-llz">
+                                                    <rect key="frame" x="8" y="28" width="365" height="161"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="E5O-Pn-llz" firstAttribute="leading" secondItem="XXh-Yo-l28" secondAttribute="leadingMargin" id="0hN-Wk-R6E"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="E5O-Pn-llz" secondAttribute="bottom" id="P1u-uR-alR"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="E5O-Pn-llz" secondAttribute="trailing" id="Pbc-KP-0Ud"/>
+                                            <constraint firstItem="E5O-Pn-llz" firstAttribute="top" secondItem="XXh-Yo-l28" secondAttribute="topMargin" id="zOk-CD-06i"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="E5O-Pn-llz" id="UoZ-6E-hE1"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ghi-nv-R7E" firstAttribute="leading" secondItem="hvb-kq-92y" secondAttribute="leading" id="3mb-Nc-N1e"/>
+                            <constraint firstItem="hvb-kq-92y" firstAttribute="bottom" secondItem="ghi-nv-R7E" secondAttribute="bottom" id="Hia-A7-tMm"/>
+                            <constraint firstItem="ghi-nv-R7E" firstAttribute="top" secondItem="hvb-kq-92y" secondAttribute="top" id="jsl-65-BHf"/>
+                            <constraint firstItem="hvb-kq-92y" firstAttribute="trailing" secondItem="ghi-nv-R7E" secondAttribute="trailing" id="sKe-Oj-awH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hvb-kq-92y"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="ghi-nv-R7E" id="0HM-rR-CKM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LZA-Mm-qq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1120.8" y="35.532233883058474"/>
+        </scene>
     </scenes>
 </document>

@@ -12,13 +12,13 @@ import UIKit
 class BundleDomainService {
     let mainBundle = Bundle.main
     
-    func getAllImages() -> [UIImage?] {
+    func getAllImages() -> [UIImage] {
         let bundleContetns = try? FileManager.default.contentsOfDirectory(atPath: mainBundle.bundlePath)
         let imagesNames = bundleContetns?.filter { $0.contains("jpeg") }
         
         guard let images = imagesNames?.map({ UIImage(named: $0) }) else {
-            return [nil]
+            return []
         }
-        return images
+        return images.compactMap { $0 }
     }
 }

@@ -11,8 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
-    let bundleService = BundleDomainService()
+
     let tableViewModel = MainScreenTableViewModel()
     
     override func viewDidLoad() {
@@ -58,7 +57,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         switch tableViewModel.sections[indexPath.section].cell[indexPath.item] {
         case .images:
-            let viewController = UIViewController()
+            let viewController = storyboard!.instantiateViewController(withIdentifier: "imagesViewController")
             navigationController?.pushViewController(viewController, animated: true)
         case .plists:
             break

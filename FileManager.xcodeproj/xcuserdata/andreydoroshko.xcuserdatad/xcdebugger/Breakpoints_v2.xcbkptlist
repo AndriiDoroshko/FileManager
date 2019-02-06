@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FileManager/BundleDomainService.swift"
-            timestampString = "571168620.0634789"
+            filePath = "FileManager/ImagesViewController.swift"
+            timestampString = "571174448.2939661"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "getAllImages()"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "tap(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
