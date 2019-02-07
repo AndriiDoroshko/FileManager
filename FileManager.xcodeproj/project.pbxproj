@@ -15,6 +15,13 @@
 		420F814C220B3BE000F54596 /* FileManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420F814B220B3BE000F54596 /* FileManagerTests.swift */; };
 		423C879A220BBDF800548244 /* DirectoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423C8799220BBDF800548244 /* DirectoryViewController.swift */; };
 		423C879C220BC49700548244 /* CreateFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423C879B220BC49700548244 /* CreateFolderViewController.swift */; };
+		423C879E220C28D300548244 /* Countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = 423C879D220C28D300548244 /* Countries.plist */; };
+		423C87A0220C2CBC00548244 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423C879F220C2CBC00548244 /* CitiesViewController.swift */; };
+		423C87A3220C300300548244 /* ProjectManagerDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423C87A2220C300300548244 /* ProjectManagerDomainModel.swift */; };
+		423C87A5220C307A00548244 /* ProjectManager.plist in Resources */ = {isa = PBXBuildFile; fileRef = 423C87A4220C307A00548244 /* ProjectManager.plist */; };
+		423C87A7220C330D00548244 /* ProjectManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423C87A6220C330D00548244 /* ProjectManagerViewController.swift */; };
+		423C87A9220C33F100548244 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423C87A8220C33F100548244 /* ProjectsViewController.swift */; };
+		423C87AB220C380300548244 /* DevelopersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423C87AA220C380300548244 /* DevelopersViewController.swift */; };
 		428FF217220B462E0006A9A7 /* BundleDomainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428FF216220B462E0006A9A7 /* BundleDomainService.swift */; };
 		428FF21D220B49060006A9A7 /* IMG_0016.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 428FF218220B49050006A9A7 /* IMG_0016.jpeg */; };
 		428FF21E220B49060006A9A7 /* IMG_3333.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 428FF219220B49050006A9A7 /* IMG_3333.jpeg */; };
@@ -25,7 +32,7 @@
 		428FF227220B5C430006A9A7 /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428FF226220B5C430006A9A7 /* ImagesViewController.swift */; };
 		428FF22A220B60AE0006A9A7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428FF229220B60AE0006A9A7 /* CollectionViewCell.swift */; };
 		428FF22F220B91290006A9A7 /* PlistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428FF22E220B91290006A9A7 /* PlistsViewController.swift */; };
-		428FF233220B94FF0006A9A7 /* PlistContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428FF232220B94FF0006A9A7 /* PlistContentViewController.swift */; };
+		428FF233220B94FF0006A9A7 /* CountriesPlistContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428FF232220B94FF0006A9A7 /* CountriesPlistContentViewController.swift */; };
 		428FF235220BA7070006A9A7 /* CountiesDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428FF234220BA7070006A9A7 /* CountiesDomainModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +59,13 @@
 		420F814D220B3BE000F54596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		423C8799220BBDF800548244 /* DirectoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryViewController.swift; sourceTree = "<group>"; };
 		423C879B220BC49700548244 /* CreateFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFolderViewController.swift; sourceTree = "<group>"; };
+		423C879D220C28D300548244 /* Countries.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Countries.plist; sourceTree = "<group>"; };
+		423C879F220C2CBC00548244 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
+		423C87A2220C300300548244 /* ProjectManagerDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagerDomainModel.swift; sourceTree = "<group>"; };
+		423C87A4220C307A00548244 /* ProjectManager.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ProjectManager.plist; sourceTree = "<group>"; };
+		423C87A6220C330D00548244 /* ProjectManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagerViewController.swift; sourceTree = "<group>"; };
+		423C87A8220C33F100548244 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
+		423C87AA220C380300548244 /* DevelopersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersViewController.swift; sourceTree = "<group>"; };
 		428FF216220B462E0006A9A7 /* BundleDomainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleDomainService.swift; sourceTree = "<group>"; };
 		428FF218220B49050006A9A7 /* IMG_0016.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0016.jpeg; sourceTree = "<group>"; };
 		428FF219220B49050006A9A7 /* IMG_3333.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_3333.jpeg; sourceTree = "<group>"; };
@@ -62,7 +76,7 @@
 		428FF226220B5C430006A9A7 /* ImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
 		428FF229220B60AE0006A9A7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		428FF22E220B91290006A9A7 /* PlistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistsViewController.swift; sourceTree = "<group>"; };
-		428FF232220B94FF0006A9A7 /* PlistContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistContentViewController.swift; sourceTree = "<group>"; };
+		428FF232220B94FF0006A9A7 /* CountriesPlistContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesPlistContentViewController.swift; sourceTree = "<group>"; };
 		428FF234220BA7070006A9A7 /* CountiesDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountiesDomainModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +131,8 @@
 				428FF225220B50A50006A9A7 /* TableViewModel */,
 				428FF237220BA76A0006A9A7 /* Cells */,
 				428FF236220BA7580006A9A7 /* Models */,
+				423C879D220C28D300548244 /* Countries.plist */,
+				423C87A4220C307A00548244 /* ProjectManager.plist */,
 			);
 			path = FileManager;
 			sourceTree = "<group>";
@@ -162,10 +178,9 @@
 			children = (
 				420F8138220B3BDE00F54596 /* ViewController.swift */,
 				428FF226220B5C430006A9A7 /* ImagesViewController.swift */,
-				428FF22E220B91290006A9A7 /* PlistsViewController.swift */,
-				428FF232220B94FF0006A9A7 /* PlistContentViewController.swift */,
-				423C8799220BBDF800548244 /* DirectoryViewController.swift */,
+				42EC5DCE220C3C99002E8923 /* Plist */,
 				423C879B220BC49700548244 /* CreateFolderViewController.swift */,
+				423C8799220BBDF800548244 /* DirectoryViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -174,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				428FF234220BA7070006A9A7 /* CountiesDomainModel.swift */,
+				423C87A2220C300300548244 /* ProjectManagerDomainModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -184,6 +200,19 @@
 				428FF229220B60AE0006A9A7 /* CollectionViewCell.swift */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		42EC5DCE220C3C99002E8923 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				428FF22E220B91290006A9A7 /* PlistsViewController.swift */,
+				423C879F220C2CBC00548244 /* CitiesViewController.swift */,
+				423C87A6220C330D00548244 /* ProjectManagerViewController.swift */,
+				423C87A8220C33F100548244 /* ProjectsViewController.swift */,
+				423C87AA220C380300548244 /* DevelopersViewController.swift */,
+				428FF232220B94FF0006A9A7 /* CountriesPlistContentViewController.swift */,
+			);
+			name = Plist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,9 +300,11 @@
 				428FF220220B49060006A9A7 /* IMG_0226.jpeg in Resources */,
 				420F8141220B3BE000F54596 /* LaunchScreen.storyboard in Resources */,
 				428FF221220B49060006A9A7 /* IMG_2750.jpeg in Resources */,
+				423C879E220C28D300548244 /* Countries.plist in Resources */,
 				428FF21E220B49060006A9A7 /* IMG_3333.jpeg in Resources */,
 				428FF21F220B49060006A9A7 /* IMG_3384.jpeg in Resources */,
 				420F813E220B3BE000F54596 /* Assets.xcassets in Resources */,
+				423C87A5220C307A00548244 /* ProjectManager.plist in Resources */,
 				420F813C220B3BDE00F54596 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,15 +323,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				423C87A7220C330D00548244 /* ProjectManagerViewController.swift in Sources */,
+				423C87AB220C380300548244 /* DevelopersViewController.swift in Sources */,
 				428FF227220B5C430006A9A7 /* ImagesViewController.swift in Sources */,
+				423C87A3220C300300548244 /* ProjectManagerDomainModel.swift in Sources */,
 				423C879A220BBDF800548244 /* DirectoryViewController.swift in Sources */,
 				428FF22F220B91290006A9A7 /* PlistsViewController.swift in Sources */,
-				428FF233220B94FF0006A9A7 /* PlistContentViewController.swift in Sources */,
+				428FF233220B94FF0006A9A7 /* CountriesPlistContentViewController.swift in Sources */,
+				423C87A9220C33F100548244 /* ProjectsViewController.swift in Sources */,
 				423C879C220BC49700548244 /* CreateFolderViewController.swift in Sources */,
 				428FF217220B462E0006A9A7 /* BundleDomainService.swift in Sources */,
 				428FF22A220B60AE0006A9A7 /* CollectionViewCell.swift in Sources */,
 				428FF235220BA7070006A9A7 /* CountiesDomainModel.swift in Sources */,
 				420F8139220B3BDE00F54596 /* ViewController.swift in Sources */,
+				423C87A0220C2CBC00548244 /* CitiesViewController.swift in Sources */,
 				428FF224220B4DE20006A9A7 /* MainScreenTableViewModel.swift in Sources */,
 				420F8137220B3BDE00F54596 /* AppDelegate.swift in Sources */,
 			);

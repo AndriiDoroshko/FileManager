@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>firstName</key>
+		<string>Misha</string>
+		<key>lastName</key>
+		<string>Smolin</string>
+		<key>projects</key>
+		<array>
+			<dict>
+				<key>projectName</key>
+				<string>COM</string>
+				<key>developers</key>
+				<array>
+					<string>Andrii Doroshko</string>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>Anatoliy</string>
+		<key>lastName</key>
+		<string>Iurkin</string>
+		<key>projects</key>
+		<array>
+			<dict>
+				<key>projectName</key>
+				<string>inCytes</string>
+				<key>developers</key>
+				<array>
+					<string>Saenko Alexander</string>
+					<string>Daniel Lisovoy</string>
+				</array>
+			</dict>
+			<dict>
+				<key>projectName</key>
+				<string>WGC</string>
+				<key>developers</key>
+				<array>
+					<string>Anton Antonov</string>
+					<string>Vadim Kaptan</string>
+				</array>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

@@ -145,19 +145,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhx-xv-gvd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1872.8" y="35.532233883058474"/>
+            <point key="canvasLocation" x="385" y="726"/>
         </scene>
-        <!--Plist Content View Controller-->
+        <!--Countries Plist Content View Controller-->
         <scene sceneID="bSI-Nc-jnD">
             <objects>
-                <viewController storyboardIdentifier="plistContentViewController" id="bna-GY-C4l" customClass="PlistContentViewController" customModule="FileManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="plistContentViewController" id="bna-GY-C4l" customClass="CountriesPlistContentViewController" customModule="FileManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eLw-TV-iXr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SEn-G0-rj5">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="SEn-G0-rj5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -175,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kru-kW-FYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2632.8000000000002" y="35.532233883058474"/>
+            <point key="canvasLocation" x="1121" y="725"/>
         </scene>
         <!--Directory View Controller-->
         <scene sceneID="afR-Dm-fH2">
@@ -205,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U99-az-6IV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3416.8000000000002" y="35.532233883058474"/>
+            <point key="canvasLocation" x="385" y="2059"/>
         </scene>
         <!--Create Folder View Controller-->
         <scene sceneID="agl-F0-BNh">
@@ -246,7 +246,127 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5rT-N5-Vre" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3409" y="36"/>
+            <point key="canvasLocation" x="1121" y="2059"/>
+        </scene>
+        <!--Cities View Controller-->
+        <scene sceneID="gBU-cJ-lmf">
+            <objects>
+                <viewController storyboardIdentifier="citiesViewController" id="4P9-r2-M0O" customClass="CitiesViewController" customModule="FileManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3qP-VW-Rqm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="8Xy-Gk-Zod">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8Xy-Gk-Zod" firstAttribute="leading" secondItem="vEv-yf-F5x" secondAttribute="leading" id="3b4-yX-DRy"/>
+                            <constraint firstItem="vEv-yf-F5x" firstAttribute="trailing" secondItem="8Xy-Gk-Zod" secondAttribute="trailing" id="UpH-w2-z4M"/>
+                            <constraint firstItem="vEv-yf-F5x" firstAttribute="bottom" secondItem="8Xy-Gk-Zod" secondAttribute="bottom" id="eud-xI-s8e"/>
+                            <constraint firstItem="vEv-yf-F5x" firstAttribute="top" secondItem="8Xy-Gk-Zod" secondAttribute="top" constant="20" id="swx-MH-DRB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vEv-yf-F5x"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="8Xy-Gk-Zod" id="57p-JY-5Hj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1KU-jQ-Wdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1873" y="725"/>
+        </scene>
+        <!--Project Manager View Controller-->
+        <scene sceneID="uSh-ru-Yjm">
+            <objects>
+                <viewController storyboardIdentifier="projectManagerViewController" id="8ku-xT-Ysy" customClass="ProjectManagerViewController" customModule="FileManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hbZ-dt-jmg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Ayd-lM-Vki">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bEY-3l-fGF" firstAttribute="bottom" secondItem="Ayd-lM-Vki" secondAttribute="bottom" id="Esy-Rx-hGd"/>
+                            <constraint firstItem="Ayd-lM-Vki" firstAttribute="leading" secondItem="bEY-3l-fGF" secondAttribute="leading" id="J9E-oC-Vgp"/>
+                            <constraint firstItem="bEY-3l-fGF" firstAttribute="top" secondItem="Ayd-lM-Vki" secondAttribute="top" constant="20" id="hcL-ig-MI0"/>
+                            <constraint firstItem="bEY-3l-fGF" firstAttribute="trailing" secondItem="Ayd-lM-Vki" secondAttribute="trailing" id="r9j-pT-R2I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bEY-3l-fGF"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Ayd-lM-Vki" id="sWy-1g-TbH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6tY-0v-JQU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1121" y="1393"/>
+        </scene>
+        <!--Projects View Controller-->
+        <scene sceneID="vz3-mk-4u2">
+            <objects>
+                <viewController storyboardIdentifier="projectsViewController" id="Ih4-vp-6QL" customClass="ProjectsViewController" customModule="FileManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GKa-c0-0ef">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="33D-Sr-99z">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1Cu-kr-ici" firstAttribute="top" secondItem="33D-Sr-99z" secondAttribute="top" constant="20" id="8NT-Zl-5ZH"/>
+                            <constraint firstItem="33D-Sr-99z" firstAttribute="leading" secondItem="1Cu-kr-ici" secondAttribute="leading" id="LIn-9H-Blx"/>
+                            <constraint firstItem="1Cu-kr-ici" firstAttribute="bottom" secondItem="33D-Sr-99z" secondAttribute="bottom" id="U7g-Gn-uHk"/>
+                            <constraint firstItem="1Cu-kr-ici" firstAttribute="trailing" secondItem="33D-Sr-99z" secondAttribute="trailing" id="WWm-Al-EbH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Cu-kr-ici"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="33D-Sr-99z" id="zjw-bM-TpL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pb8-ur-sEB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1873" y="1393"/>
+        </scene>
+        <!--Developers View Controller-->
+        <scene sceneID="4sE-pL-EJf">
+            <objects>
+                <viewController storyboardIdentifier="developersViewController" id="a7l-M7-Rys" customClass="DevelopersViewController" customModule="FileManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VR5-X0-3kH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Vbv-mD-tec">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DPf-EB-dBG" firstAttribute="trailing" secondItem="Vbv-mD-tec" secondAttribute="trailing" id="4D8-A1-htI"/>
+                            <constraint firstItem="DPf-EB-dBG" firstAttribute="bottom" secondItem="Vbv-mD-tec" secondAttribute="bottom" id="9RZ-dQ-dO4"/>
+                            <constraint firstItem="DPf-EB-dBG" firstAttribute="top" secondItem="Vbv-mD-tec" secondAttribute="top" constant="20" id="lbA-po-yaN"/>
+                            <constraint firstItem="Vbv-mD-tec" firstAttribute="leading" secondItem="DPf-EB-dBG" secondAttribute="leading" id="s00-sd-b5f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DPf-EB-dBG"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Vbv-mD-tec" id="Fql-t6-eBv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iXK-Wk-vVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2654" y="1393"/>
         </scene>
     </scenes>
 </document>

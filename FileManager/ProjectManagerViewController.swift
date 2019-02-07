@@ -1,5 +1,5 @@
 //
-//  PlistContentViewController.swift
+//  ProjectManagerViewController.swift
 //  FileManager
 //
 //  Created by Andrey Doroshko on 2/7/19.
@@ -9,27 +9,27 @@
 import Foundation
 import UIKit
 
-class PlistContentViewController: UIViewController {
+class ProjectManagerViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
     let bundleService = BundleDomainService()
+    var content: [ProjectManagerDomainModel]?
     var displayingPlist = ""
-    var content: [CountiesDomainModel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let data = bundleService.getPlistContent(named: displayingPlist)
         let decoder = PropertyListDecoder()
-        content = try? decoder.decode([CountiesDomainModel].self, from: data)
+        content = try? decoder.decode([ProjectManagerDomainModel].self, from: data)
         
         tableView.delegate = self
         tableView.dataSource = self
     }
 }
 
-extension PlistContentViewController: UITableViewDelegate, UITableViewDataSource {
+extension ProjectManagerViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -43,12 +43,13 @@ extension PlistContentViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "Default")
+        var cell = tableView.dequeueReusableCell(withIdentifier: "Subtitle")
         if (cell == nil) {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "Default")
+            cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Subtitle")
         }
         
-        cell!.textLabel?.text = content?[indexPath.item].displayName
+        cell!.textLabel?.text = content?[indexPath.item].firstName
+        cell!.detailTextLabel?.text = content?[indexPath.item].lastName
         cell!.accessoryType = .disclosureIndicator
         
         return cell!
@@ -56,6 +57,11 @@ extension PlistContentViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let viewController = storyboard!.instantiateViewController(withIdentifier: "projectsViewController") as? ProjectsViewController
+        viewController?.projects = content?[indexPath.item].projects
+        navigationController?.pushViewController(viewController!, animated: true)
     }
 }
+
 

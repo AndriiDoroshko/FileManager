@@ -9,6 +9,6 @@
 import Foundation
 
 struct CountiesDomainModel: Codable {
-    let code: String
-    let displayName: String
+    let name: String
+    let cities: [String]
 }

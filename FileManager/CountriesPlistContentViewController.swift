@@ -1,5 +1,5 @@
 //
-//  PlistsViewController.swift
+//  PlistContentViewController.swift
 //  FileManager
 //
 //  Created by Andrey Doroshko on 2/7/19.
@@ -9,32 +9,33 @@
 import Foundation
 import UIKit
 
-class PlistsViewController: UIViewController {
+class CountriesPlistContentViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
     let bundleService = BundleDomainService()
-    var plists = [String]()
+    var displayingPlist = ""
+    var content: [CountiesDomainModel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Plists"
         
-        plists = bundleService.getAllPlistNames()
+        let data = bundleService.getPlistContent(named: displayingPlist)
+        let decoder = PropertyListDecoder()
+        content = try? decoder.decode([CountiesDomainModel].self, from: data)
         
         tableView.delegate = self
         tableView.dataSource = self
     }
 }
 
-
-extension PlistsViewController: UITableViewDelegate, UITableViewDataSource {
+extension CountriesPlistContentViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return plists.count
+        return content?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -47,25 +48,18 @@ extension PlistsViewController: UITableViewDelegate, UITableViewDataSource {
             cell = UITableViewCell(style: .default, reuseIdentifier: "Default")
         }
         
-        cell!.textLabel?.text = plists[indexPath.item]
-        cell!.accessoryType = .disclosureIndicator
+        cell!.textLabel?.text = content?[indexPath.item].name
+        cell!.accessoryType = .none
         
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if plists[indexPath.item].contains("Countries") {
-            let viewController = storyboard!.instantiateViewController(withIdentifier: "plistContentViewController") as? CountriesPlistContentViewController
-            viewController?.displayingPlist = plists[indexPath.item]
-            navigationController?.pushViewController(viewController!, animated: true)
-
-        } else if plists[indexPath.item].contains("ProjectManager") {
-            let viewController = storyboard!.instantiateViewController(withIdentifier: "projectManagerViewController") as? ProjectManagerViewController
-            viewController?.displayingPlist = plists[indexPath.item]
-            navigationController?.pushViewController(viewController!, animated: true)
-        }
         
-        
+        let viewController = storyboard!.instantiateViewController(withIdentifier: "citiesViewController") as? CitiesViewController
+        viewController?.content = content?[indexPath.item]
+        navigationController?.pushViewController(viewController!, animated: true)
     }
 }
+

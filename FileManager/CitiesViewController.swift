@@ -1,5 +1,5 @@
 //
-//  PlistsViewController.swift
+//  CitiesViewController.swift
 //  FileManager
 //
 //  Created by Andrey Doroshko on 2/7/19.
@@ -9,32 +9,29 @@
 import Foundation
 import UIKit
 
-class PlistsViewController: UIViewController {
+class CitiesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
     let bundleService = BundleDomainService()
-    var plists = [String]()
+    var displayingPlist = ""
+    var content: CountiesDomainModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Plists"
-        
-        plists = bundleService.getAllPlistNames()
         
         tableView.delegate = self
         tableView.dataSource = self
     }
 }
 
-
-extension PlistsViewController: UITableViewDelegate, UITableViewDataSource {
+extension CitiesViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return plists.count
+        return content?.cities.count ?? 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -47,7 +44,7 @@ extension PlistsViewController: UITableViewDelegate, UITableViewDataSource {
             cell = UITableViewCell(style: .default, reuseIdentifier: "Default")
         }
         
-        cell!.textLabel?.text = plists[indexPath.item]
+        cell!.textLabel?.text = content?.cities[indexPath.item] ?? "Nothing to display"
         cell!.accessoryType = .disclosureIndicator
         
         return cell!
@@ -55,17 +52,6 @@ extension PlistsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if plists[indexPath.item].contains("Countries") {
-            let viewController = storyboard!.instantiateViewController(withIdentifier: "plistContentViewController") as? CountriesPlistContentViewController
-            viewController?.displayingPlist = plists[indexPath.item]
-            navigationController?.pushViewController(viewController!, animated: true)
-
-        } else if plists[indexPath.item].contains("ProjectManager") {
-            let viewController = storyboard!.instantiateViewController(withIdentifier: "projectManagerViewController") as? ProjectManagerViewController
-            viewController?.displayingPlist = plists[indexPath.item]
-            navigationController?.pushViewController(viewController!, animated: true)
-        }
-        
-        
     }
 }
+

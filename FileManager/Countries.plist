@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Ukraine</string>
+		<key>cities</key>
+		<array>
+			<string>Kiev</string>
+			<string>Kharkov</string>
+			<string>Lviv</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>United States</string>
+		<key>cities</key>
+		<array>
+			<string>New York</string>
+			<string>Los Angeles</string>
+		</array>
+	</dict>
+</array>
+</plist>

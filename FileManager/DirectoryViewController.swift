@@ -65,7 +65,7 @@ extension DirectoryViewController: UITableViewDelegate, UITableViewDataSource {
             cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Subtitle")
         }
         
-        cell!.textLabel?.text = contains?[indexPath.item].lastPathComponent
+        cell!.textLabel?.text = contains?[indexPath.item].lastPathComponent ?? "Nothing to display"
         cell!.detailTextLabel?.text = "folder"
         cell!.accessoryType = .disclosureIndicator
         
