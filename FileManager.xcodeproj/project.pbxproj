@@ -22,6 +22,9 @@
 		428FF224220B4DE20006A9A7 /* MainScreenTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428FF223220B4DE20006A9A7 /* MainScreenTableViewModel.swift */; };
 		428FF227220B5C430006A9A7 /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428FF226220B5C430006A9A7 /* ImagesViewController.swift */; };
 		428FF22A220B60AE0006A9A7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428FF229220B60AE0006A9A7 /* CollectionViewCell.swift */; };
+		428FF22F220B91290006A9A7 /* PlistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428FF22E220B91290006A9A7 /* PlistsViewController.swift */; };
+		428FF233220B94FF0006A9A7 /* PlistContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428FF232220B94FF0006A9A7 /* PlistContentViewController.swift */; };
+		428FF235220BA7070006A9A7 /* CountiesDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428FF234220BA7070006A9A7 /* CountiesDomainModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		428FF223220B4DE20006A9A7 /* MainScreenTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenTableViewModel.swift; sourceTree = "<group>"; };
 		428FF226220B5C430006A9A7 /* ImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
 		428FF229220B60AE0006A9A7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		428FF22E220B91290006A9A7 /* PlistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistsViewController.swift; sourceTree = "<group>"; };
+		428FF232220B94FF0006A9A7 /* PlistContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistContentViewController.swift; sourceTree = "<group>"; };
+		428FF234220BA7070006A9A7 /* CountiesDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountiesDomainModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +110,10 @@
 				420F8142220B3BE000F54596 /* Info.plist */,
 				428FF218220B49050006A9A7 /* IMG_0016.jpeg */,
 				428FF222220B493C0006A9A7 /* images */,
+				428FF22D220B7F770006A9A7 /* plists */,
 				428FF225220B50A50006A9A7 /* TableViewModel */,
-				428FF229220B60AE0006A9A7 /* CollectionViewCell.swift */,
+				428FF237220BA76A0006A9A7 /* Cells */,
+				428FF236220BA7580006A9A7 /* Models */,
 			);
 			path = FileManager;
 			sourceTree = "<group>";
@@ -143,8 +151,33 @@
 			children = (
 				420F8138220B3BDE00F54596 /* ViewController.swift */,
 				428FF226220B5C430006A9A7 /* ImagesViewController.swift */,
+				428FF22E220B91290006A9A7 /* PlistsViewController.swift */,
+				428FF232220B94FF0006A9A7 /* PlistContentViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		428FF22D220B7F770006A9A7 /* plists */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = plists;
+			sourceTree = "<group>";
+		};
+		428FF236220BA7580006A9A7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				428FF234220BA7070006A9A7 /* CountiesDomainModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		428FF237220BA76A0006A9A7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				428FF229220B60AE0006A9A7 /* CollectionViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,8 +287,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				428FF227220B5C430006A9A7 /* ImagesViewController.swift in Sources */,
+				428FF22F220B91290006A9A7 /* PlistsViewController.swift in Sources */,
+				428FF233220B94FF0006A9A7 /* PlistContentViewController.swift in Sources */,
 				428FF217220B462E0006A9A7 /* BundleDomainService.swift in Sources */,
 				428FF22A220B60AE0006A9A7 /* CollectionViewCell.swift in Sources */,
+				428FF235220BA7070006A9A7 /* CountiesDomainModel.swift in Sources */,
 				420F8139220B3BDE00F54596 /* ViewController.swift in Sources */,
 				428FF224220B4DE20006A9A7 /* MainScreenTableViewModel.swift in Sources */,
 				420F8137220B3BDE00F54596 /* AppDelegate.swift in Sources */,

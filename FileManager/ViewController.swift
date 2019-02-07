@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     let tableViewModel = MainScreenTableViewModel()
+    let bundleService = BundleDomainService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,7 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
+//        bundleService.getAllPlists()
     }
 }
 
@@ -60,7 +62,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             let viewController = storyboard!.instantiateViewController(withIdentifier: "imagesViewController")
             navigationController?.pushViewController(viewController, animated: true)
         case .plists:
-            break
+            let viewController = storyboard!.instantiateViewController(withIdentifier: "plistsViewController")
+            navigationController?.pushViewController(viewController, animated: true)
         case .temp:
             break
         case .documents:
